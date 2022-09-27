@@ -2,18 +2,28 @@ package main
 
 import (
 	"github.com/spf13/cobra"
+	"log"
+	"server01.jz/yaoshuai_dev/luna/cmd/luna/v2/internal/project"
 )
 
 var rootCmd = &cobra.Command{
 	Use:     "luna",
-	Short:   "Kratos: An elegant toolkit for Go microservices.",
-	Long:    `Kratos: An elegant toolkit for Go microservices.`,
+	Short:   "Luna: An elegant toolkit for Go microservices.",
+	Long:    `Luna: An elegant toolkit for Go microservices.`,
 	Version: release,
 }
 
+func init() {
+	rootCmd.AddCommand(project.CmdNew)
+	//rootCmd.AddCommand(upgrade.CmdUpgrade)
+	//rootCmd.AddCommand(change.CmdChange)
+	//rootCmd.AddCommand(run.CmdRun)
+}
+
 func main() {
-	cmd := &cobra.Command{
-		Use:   "test",
-		Short: "my test program",
+
+	if err := rootCmd.Execute(); err != nil {
+		log.Fatal(err)
 	}
+
 }
