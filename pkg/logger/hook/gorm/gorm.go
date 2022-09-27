@@ -8,7 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 
-	"201_sdhuasu/pkg/logger"
+	"github.com/leoay/luna/pkg/logger"
 )
 
 // Create logger hook from gorm

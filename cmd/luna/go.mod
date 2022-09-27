@@ -1,4 +1,4 @@
-module server01.jz/yaoshuai_dev/luna/cmd/luna/v2
+module github.com/leoay/luna/cmd/luna/v2
 
 go 1.19
 
@@ -18,5 +18,4 @@ require (
 	golang.org/x/term v0.0.0-20210503060354-a79de5458b56 // indirect
 	golang.org/x/text v0.3.3 // indirect
 	golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898 // indirect
-	server01.jz/yaoshuai_dev/luna v0.0.0-20220922040058-ad7e5971ccb3 // indirect
 )

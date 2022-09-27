@@ -8,7 +8,7 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"
-	"server01.jz/yaoshuai_dev/luna/cmd/luna/v2/internal/base"
+	"github.com/leoay/luna/cmd/luna/v2/internal/base"
 )
 
 var repoAddIgnores = []string{

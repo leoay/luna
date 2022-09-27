@@ -6,7 +6,7 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 
-	"201_sdhuasu/pkg/auth"
+	"github.com/leoay/luna/pkg/auth"
 )
 
 const defaultKey = "gin-admin"

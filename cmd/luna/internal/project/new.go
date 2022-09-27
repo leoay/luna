@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/fatih/color"
+	"github.com/leoay/luna/cmd/luna/v2/internal/base"
 	"os"
 	"path"
-	"server01.jz/yaoshuai_dev/luna/cmd/luna/v2/internal/base"
 )
 
 // Project is a project template.

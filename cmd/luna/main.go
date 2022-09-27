@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/leoay/Luna/cmd/luna/v2/internal/project"
 	"github.com/spf13/cobra"
 	"log"
-	"server01.jz/yaoshuai_dev/luna/cmd/luna/v2/internal/project"
 )
 
 var rootCmd = &cobra.Command{
