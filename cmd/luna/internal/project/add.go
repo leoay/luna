@@ -53,8 +53,11 @@ func (p *Project) Add(ctx context.Context, dir string, layout string, branch str
 
 	base.Tree(to, dir)
 
+	//遍历文件，修改全局
+
+	fmt.Println(color.WhiteString("$ cd %s", p.Name))
 	fmt.Printf("\n🍺 Repository creation succeeded %s\n", color.GreenString(p.Name))
-	fmt.Print("💻 Use the following command to add a project 👇:\n\n")
+	fmt.Print("💻AAAA Use the following command to add a project 👇:\n\n")
 
 	fmt.Println(color.WhiteString("$ cd %s", p.Name))
 	fmt.Println(color.WhiteString("$ go generate ./..."))
