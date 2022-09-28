@@ -79,7 +79,7 @@ func MotifyMakefile(filepath string, target string) error {
 			}
 		}
 		//根据关键词覆盖当前行
-		if strings.Contains(line, "server") {
+		if strings.Contains(line, "luna-layout") {
 			fmt.Println("PPPPPP")
 			k := 0
 			spaceStr := ""
@@ -88,8 +88,8 @@ func MotifyMakefile(filepath string, target string) error {
 				k++
 			}
 			file.WriteAt([]byte(spaceStr), pos)
-			fmt.Println("SDSDDSDDD: ", strings.Split(line, "server")[0]+target+"\n")
-			bytes := []byte(strings.Split(line, "server")[0] + target)
+			fmt.Println("SDSDDSDDD: ", strings.Split(line, "luna-layout")[0]+target+"\n")
+			bytes := []byte(strings.Split(line, "luna-layout")[0] + target)
 			file.WriteAt(bytes, pos)
 		}
 		//每一行读取完后记录位置
@@ -122,7 +122,7 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 		return err
 	}
 	e := os.Rename(
-		path.Join(to, "cmd", "server"),
+		path.Join(to, "cmd", "luna-layout"),
 		path.Join(to, "cmd", p.Name),
 	)
 	if e != nil {
@@ -135,6 +135,8 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 		return err
 	}
 
+	files = append(files, to+"/cmd/"+p.Name+"/main.go")
+
 	for _, v := range files {
 		//读写方式打开文件
 		file, err := os.OpenFile(v, os.O_RDWR, 0666)
@@ -144,7 +146,6 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 		}
 		//defer关闭文件
 		defer file.Close()
-
 		//获取文件大小
 		stat, err := file.Stat()
 		if err != nil {
@@ -169,15 +170,18 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 				}
 			}
 			//根据关键词覆盖当前行
-			if strings.Contains(line, "\"server") {
+			if strings.Contains(line, "\"luna-layout") {
 				k := 0
 				spaceStr := ""
 				for k < len(line) {
 					spaceStr = spaceStr + " "
 					k++
 				}
+
+				fmt.Println("AAAAAAAAAAAAAAA: ", v, line)
+
 				file.WriteAt([]byte(spaceStr), pos)
-				bytes := []byte(strings.Split(line, "server/")[0] + p.Name + "/" + strings.Split(line, "\"server/")[1])
+				bytes := []byte(strings.Split(line, "luna-layout/")[0] + p.Name + "/" + strings.Split(line, "\"luna-layout/")[1])
 				file.WriteAt(bytes, pos)
 			}
 			//每一行读取完后记录位置
