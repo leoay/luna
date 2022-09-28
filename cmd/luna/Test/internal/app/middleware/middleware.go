@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"Test/internal/app/ginx"
 	"github.com/gin-gonic/gin"
-	"github.com/leoay/luna/internal/app/ginx"
 	"github.com/leoay/luna/pkg/errors"
 )
 

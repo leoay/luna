@@ -3,6 +3,7 @@ module Test
 go 1.19
 
 require (
+	github.com/LyricTian/gin-admin/v8 v8.1.0
 	github.com/LyricTian/gzip v0.1.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-contrib/cors v1.4.0
@@ -12,7 +13,7 @@ require (
 	github.com/google/gops v0.3.25
 	github.com/google/wire v0.5.0
 	github.com/koding/multiconfig v0.0.0-20171124222453-69c27309b2d7
-	github.com/leoay/luna v0.0.0-20220927104632-5dbc876c27e6
+	github.com/leoay/luna v0.0.0-20220928033240-7cdde3bdda2d
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/urfave/cli/v2 v2.16.3
 	golang.org/x/time v0.0.0-20220922220347-f3bd1da661af
@@ -21,7 +22,6 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.1.0 // indirect
-	github.com/LyricTian/gin-admin/v8 v8.1.0 // indirect
 	github.com/LyricTian/queue v1.3.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/fatih/camelcase v1.0.0 // indirect
@@ -43,7 +43,6 @@ require (
 	github.com/jinzhu/copier v0.3.5 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/jonboulle/clockwork v0.3.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/lestrrat-go/strftime v1.0.6 // indirect
@@ -56,7 +55,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
-	github.com/sony/sonyflake v1.1.0 // indirect
 	github.com/tidwall/btree v1.4.2 // indirect
 	github.com/tidwall/buntdb v1.2.10 // indirect
 	github.com/tidwall/gjson v1.14.3 // indirect

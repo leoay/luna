@@ -9,8 +9,8 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 
-	"util/internal/app/contextx"
-	"util/internal/app/schema"
+	"Test/internal/app/contextx"
+	"Test/internal/app/schema"
 )
 
 // Define base model

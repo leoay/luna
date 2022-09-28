@@ -3,9 +3,9 @@ package util
 import (
 	"context"
 
+	"Test/internal/app/contextx"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	"util/internal/app/contextx"
 )
 
 var TransSet = wire.NewSet(wire.Struct(new(Trans), "*"))
