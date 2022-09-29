@@ -15,13 +15,9 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(project.CmdNew)
-	//rootCmd.AddCommand(upgrade.CmdUpgrade)
-	//rootCmd.AddCommand(change.CmdChange)
-	//rootCmd.AddCommand(run.CmdRun)
 }
 
 func main() {
-
 	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err)
 	}
