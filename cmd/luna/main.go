@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/leoay/luna/cmd/luna/v2/internal/project"
+	"github.com/leoay/luna/cmd/luna/v2/internal/upgrade"
 	"github.com/spf13/cobra"
 	"log"
 )
