@@ -10,7 +10,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:     "luna",
 	Short:   "Luna: An elegant toolkit for Go microservices.",
-	Long:    `Luna: An elegant toolkit for Go microservices.`,
+	Long:    `Luna: An elegant toolkit for Go microservices.Luna: An elegant toolkit for Go microservices`,
 	Version: release,
 }
 
