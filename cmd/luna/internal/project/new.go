@@ -137,6 +137,13 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 
 	files = append(files, to+"/cmd/"+p.Name+"/main.go")
 
+	files2, err := GetAllFiles(to + "/pkg")
+	if err != nil {
+		return err
+	}
+
+	files = append(files, files2...)
+
 	for _, v := range files {
 		//读写方式打开文件
 		file, err := os.OpenFile(v, os.O_RDWR, 0666)
@@ -177,9 +184,6 @@ func (p *Project) New(ctx context.Context, dir string, layout string, branch str
 					spaceStr = spaceStr + " "
 					k++
 				}
-
-				fmt.Println("AAAAAAAAAAAAAAA: ", v, line)
-
 				file.WriteAt([]byte(spaceStr), pos)
 				bytes := []byte(strings.Split(line, "luna-layout/")[0] + p.Name + "/" + strings.Split(line, "\"luna-layout/")[1])
 				file.WriteAt(bytes, pos)
